@@ -1,0 +1,301 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Itim&display=swap');
+:root{
+    --white:        #FFFFFF;
+    --pink:         #F3D9D8;
+    --purple:       #A97D8D;
+    --darkpurple:   #713C5D;
+    --grey:         #cfcfcf;
+    --darkGrey:     #7c7c7c;
+}
+*{
+    font-family: "Itim", sans-serif;
+}
+body{
+    margin: 0;
+    background-color: var(--pink)!important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    max-height: 100vh;
+    overflow: hidden;
+}
+fieldset{
+    border: var(--darkpurple) solid 4px !important;
+    background-color: var(--pink);
+    border-radius: .5em;
+    margin: 5% !important;
+    width: 350px;
+    height: 420px;
+    max-width: 350px;
+    z-index: 20;
+}
+.headerTitle{
+    padding: 5% 0 !important;
+    margin: 0 !important;
+    margin-bottom: 5% !important;
+    color: var(--white);
+    text-align: center;
+    font-size: 1.5em;
+    background-color: var(--darkpurple);
+}
+.measureUnit{
+    display: flex ;
+    justify-content: space-around;
+}
+.measureUnit button{
+    border: none;
+    border-radius: .25em;
+    padding: .25em 2em;
+    width: fit-content;
+    background-color: var(--purple);
+    color: var(--white);
+}
+.active{
+    background-color: var(--darkpurple) !important;
+    transition: .5s;
+}
+hr{
+    width: 85%;
+    margin: 0 auto !important;
+    margin-top: 5% !important;
+}
+.row{
+    margin: 2em 0 !important;
+}
+.row label{
+    font-weight: 700;
+}
+.row input{
+    margin: 0 3%;
+    border-radius: 1em;
+    max-width: 300px;
+    border: none;
+    padding: 1% 5%;
+}
+.genBttn{
+    margin: 1.5em 0 !important;
+    display: flex;
+    justify-content: center;
+}
+.genBttn button{
+    background-color: var(--grey);
+    border: none;
+    border-radius: .25em;
+    padding: .5em 1em;
+    font-weight: 600;
+    transition: .5s;
+}
+.genBttn button:hover{
+    background-color: var(--darkGrey);
+    color: var(--white);
+}
+.boxes{
+    height: 420px;
+    width: 500px;
+}
+.B1{
+    z-index: 2;
+}
+.B2{
+    opacity: 1;
+    z-index: 1;
+}
+.box{
+    position: absolute;
+    height: 420px;
+    width: 500px;
+    background-color: var(--darkpurple);
+    transition: .7s;
+}
+.fadeOutL{
+    translate: -440px 0;
+    opacity: 0;
+}
+.fadeOutR{
+    translate: 440px 0;
+    opacity: 0;
+}
+.fadeIn{
+    translate: 0 0 !important;
+    opacity: 1;
+}
+.itterate{
+    cursor: pointer;
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    background-color: var(--purple);
+    aspect-ratio: 1/1;
+    height: 40px;   
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--pink);
+    transition: .5s;
+}
+.itterate:hover {
+    background-color: var(--pink);
+    color: var(--purple);
+}
+span{
+    font-size: 1.5em;
+}
+.slider{
+    position: relative;
+    bottom: -105%;
+    display: flex;
+    justify-content: center;
+}
+.slider div{
+    width: 10px;
+    height: 10px;
+    margin: 3px 2px;
+    background-color: var(--darkpurple);
+    border-radius: 1em;
+    transition: .5s;
+}
+.activeSlide{
+    width: 20px !important;
+}
+header{
+    font-size: 1.5em;
+    position: absolute;
+    top: -10%;
+}
+.text{
+    background-color: var(--grey);
+    margin: 2% 5%;
+    width: fit-content;
+    padding: 1% 3%;
+    border-radius: 1em;
+    font-size: .85em;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.headText{
+    padding: .5% 5%;
+    font-size: 1em;
+    margin-bottom: 4%;
+    margin-top: 3%;
+    font-family: "Itim", sans-serif;
+}
+.semiRadar{
+    position: relative;
+    overflow: hidden;
+    margin-top: 2% !important;
+    width: 360px;
+    height: 180px;
+    background-color: var(--grey);
+    margin: auto;
+    border-top-left-radius:25em;
+    border-top-right-radius:25em;
+    z-index: 1;
+    border:solid 3px var(--grey) ;
+    border-bottom: none;
+}
+.semiRadar::after {
+    content: '';
+    display: block;
+    min-width: 360px;
+    min-height: 180px;
+    background-color: var(--darkpurple);
+    border-top-left-radius: 25em;
+    border-top-right-radius: 25em;
+    z-index: 5;
+    scale: .65;
+    border: solid 3px var(--grey);
+    border-bottom: none;
+    position: absolute;
+    bottom: -19%;
+}
+.semiRadar::before{
+    content: '';
+    display: block;
+    position: absolute;
+    width: 360px;
+    height: 360px;
+    border-radius:50%;
+    background-color: var(--grey);
+    scale: .1;
+    z-index: 10;
+    bottom: 0;
+    transform-origin: 50% 100%;
+}
+.r1{
+    background-color: rgb(50, 172, 50);
+    position: absolute;
+    bottom: 0;
+    width: 360px;
+    height: 180px;
+    border-top-left-radius: 50em;
+    transform: rotateZ(0deg);
+    transform-origin: 50% 50%;
+}
+.r2{
+    background-color: #2b2ba3;
+    border-right: var(--grey) solid 3px;
+    position: absolute;
+    bottom: 0;
+    width: 180px;
+    height: 180px;
+    border-top-left-radius: 50em;
+    transform: rotateZ(-6.750deg);
+    transform-origin: 100% 100%;
+}
+.r3{
+    background-color: #aa1717;
+    border-left: var(--grey) solid 3px;
+    position: absolute;
+    bottom: 0;
+    width: 180px;
+    height: 180px;
+    border-top-right-radius: 50em;
+    transform: rotateZ(22.5deg);
+    transform-origin: 0% 100%;
+    right: 0;
+}
+.arm{
+    background-color: black;
+    width: 10px;
+    height: 135px;
+    z-index: 7;
+    transform-origin: 50% 100%;
+    position: absolute;
+    left: 49.5%;
+    bottom: 9%;
+    rotate: 0deg;
+    transition: 1s;
+}
+.arm::after{
+    content: '';
+    display: block;
+    position: absolute;
+    margin: auto;
+    padding: 10%;
+    border-radius: 2%;
+    width: 100%;
+    height: 10%;
+    box-shadow: inset 0 0 300px black;
+    top: -9%;
+    scale: 2;
+    transform-origin: 50% 0%;
+    clip-path: polygon(50% 0, 100% 100%, 0% 100%);
+    
+}
+.txt{
+    margin-top: 5%;
+    font-family: "Itim", sans-serif;
+    font-size: 1em;
+}
+#BMIamount, .stat{
+    font-size: 1em;
+}
+.inline{
+    display: flex;
+}
+.descrip{
+    min-height: 65px;
+    min-width: 90%;
+}

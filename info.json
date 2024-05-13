@@ -1,0 +1,16 @@
+{
+    "data":[
+        {
+            "status": "Underweight",
+            "advice":"Focus on Health, Not Appearance: Instead of solely focusing on gaining weight for aesthetic reasons, prioritize overall health and well-being. Encourage a balanced diet and regular exercise to promote strength, energy, and vitality."
+        },
+        {
+            "status":"Normal",
+            "advice":"Keep on going you have a balanced BMI."
+        },
+        {
+            "status":"Overweight",
+            "advice":"Physical Activity: Suggest incorporating regular physical activity into your routine. Encourage activities you enjoy and can sustain over time, such as walking, swimming, cycling, or dancing."
+        }
+    ]
+}
